@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 alert('Pagamento Bem Efetuado');
 
-                // Atualizar o campo upgrade do usuário logado
                 const userEmail = paymentData.email;
                 if (userEmail) {
                     await fetch(`https://microsservi-oandrade-production.up.railway.app/api/upgrade/${userEmail}`, {
